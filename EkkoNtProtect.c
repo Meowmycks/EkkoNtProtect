@@ -32,7 +32,7 @@
  *     Struct: ~0x220 bytes, same as Tier 2 with +0x28 status pointer
  *
  * CREDITS:
- *   - Original Ekko technique by C5pider (Austin Hudson)
+ *   - Original Ekko technique by C5pider (Paul Ungur)
  *   - Shared-RSP clobbering insight: colleague's analysis of TppCallbackEpilog behavior
  *   - Trampoline technique and ntdll enumeration: this research
  *
