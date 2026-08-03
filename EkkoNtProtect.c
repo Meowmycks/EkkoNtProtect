@@ -37,7 +37,7 @@
  *   - Trampoline technique and ntdll enumeration: this research
  *
  * BUILD:
- *   cl.exe /O2 /W4 EkkoNtProtect.c /link ntdll.lib
+ *   gcc.exe EkkoNtProtect.c -o EkkoNtProtect.exe
  *
  * NOTE:
  *   All struct offsets, function canaries, and RVAs are specific to a particular ntdll
