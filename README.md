@@ -24,7 +24,7 @@ ntdll!TppCallbackEpilog+0x74:
 
 The watchpoint fires on `TppCallbackEpilog` between every callback dispatch, proving the timer infrastructure actively clobbers the 5th argument slot. This is why the original Ekko PoC exclusively uses APIs with ≤4 parameters (`VirtualProtect`, `SystemFunction032`, `WaitForSingleObject`, `SetEvent`) and why `NtProtectVirtualMemory` (5 arguments) cannot be called directly from the timer chain.
 
-This constraint was first articulated in the context of comparing Ekko's timer dispatch model to [Foliage](https://github.com/SecIdiot/FOLIAGE)'s APC-based model, where each call gets its own RSP position (`Rsp -= 0x1000 * N`), isolating stack arguments between frames. Havoc's [Demon](https://github.com/HavocFramework/Havoc) implementation confirms this design decision; its Ekko/Zilean path uses `VirtualProtect` (4 args) while its Foliage path uses `NtProtectVirtualMemory` (5 args).
+This constraint was first articulated in the context of comparing Ekko's timer dispatch model to [Foliage](https://github.com/kyleavery/AceLdr/blob/main/src/hooks/delay.c)'s APC-based model, where each call gets its own RSP position (`Rsp -= 0x1000 * N`), isolating stack arguments between frames. Havoc's [Demon](https://github.com/HavocFramework/Havoc) implementation confirms this design decision; its Ekko/Zilean path uses `VirtualProtect` (4 args) while its Foliage path uses `NtProtectVirtualMemory` (5 args).
 
 <img width="1167" height="445" alt="image" src="https://github.com/user-attachments/assets/b359b2d9-c4a8-4a76-8cfd-8e45d1d26cab" />
 
