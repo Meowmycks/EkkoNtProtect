@@ -164,4 +164,4 @@ Because these are internal, unexported functions, you cannot retrieve their base
 
 This tool is provided for educational purposes and authorized security research only. The techniques described are intended to advance understanding of sleep obfuscation constraints and defensive detection opportunities. Misuse of this information is solely the responsibility of the user.
 
-Also Claude helped me write ~95% of this documentation. If there's errors, let me know.
+Also Claude helped me write ~95% of this documentation. If there's errors, let me know. I already found a handful on my own.
