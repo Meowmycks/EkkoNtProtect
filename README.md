@@ -154,7 +154,7 @@ Because these are internal, unexported functions, you cannot retrieve their base
 ## References
 
 - [Ekko](https://github.com/Cracked5pider/Ekko) — Original timer-based sleep obfuscation by C5pider
-- [Foliage](https://github.com/SecIdiot/FOLIAGE) — APC-based sleep obfuscation with per-frame RSP isolation
+- [Foliage](https://github.com/kyleavery/AceLdr/blob/main/src/hooks/delay.c) — AceLdr's implementation of FOLIAGE for APC-based sleep obfuscation with per-frame RSP isolation
 - [Havoc Demon Obf.c](https://github.com/HavocFramework/Havoc/blob/main/payloads/Demon/src/core/Obf.c) — Production implementation demonstrating the VirtualProtect (Ekko) vs NtProtectVirtualMemory (Foliage) design choice
 - [WID_LoadLibrary](https://github.com/paskalian/WID_LoadLibrary) — Reverse engineering of the Windows loader pipeline
 - [Windows vs Linux Loader Architecture](https://github.com/servomekanism/windows-vs-linux-loader-architecture) — Detailed analysis of ntdll loader internals
